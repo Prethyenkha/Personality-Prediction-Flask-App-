@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Cluster Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Personality Cluster Predictor</h1>
+        <form action="/predict" method="POST">
+            {% for field in [
+                'social_energy', 'alone_time_preference', 'talkativeness', 'deep_reflection', 'group_comfort',
+                'party_liking', 'listening_skill', 'empathy', 'creativity', 'organization', 'leadership',
+                'risk_taking', 'public_speaking_comfort', 'curiosity', 'routine_preference', 'excitement_seeking',
+                'friendliness', 'emotional_stability', 'planning', 'spontaneity', 'adventurousness', 'reading_habit',
+                'sports_interest', 'online_social_usage', 'travel_desire', 'gadget_usage', 'work_style_collaborative',
+                'decision_speed', 'stress_handling'] %}
+                <label>{{ field.replace('_', ' ').title() }}:</label>
+                <input type="text" name="{{ field }}" required><br>
+            {% endfor %}
+            <button type="submit">Predict Cluster</button>
+        </form>
+
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+    </div>
+</body>
+</html>
