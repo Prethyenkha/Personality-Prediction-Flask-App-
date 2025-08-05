@@ -79,6 +79,6 @@ This project uses **DBSCAN clustering** to group people based on their personali
 
 ---
 
-## 📝 License  
+##🖼️ App Preview
 
-This project is open-source and available for personal and educational use.  
+<img width="1365" height="515" alt="Screenshot 2025-08-05 141454" src="https://github.com/user-attachments/assets/c0cb3be0-b0dc-4244-908e-8a72c5b73983" />
